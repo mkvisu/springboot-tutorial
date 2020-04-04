@@ -21,7 +21,7 @@ public class SolarSystemServiceTest {
 	@Test
 	public void testGetInformationTest() {
 		SolarSystem record = service.getInformation();
-		assertTrue("Incorrect", record.getLocated().equalsIgnoreCase("Milky Way"));
+		assertTrue("Incorrect value", record.getLocated().equalsIgnoreCase("Milky Way"));
 		System.out.println(record);
 	}
 }
