@@ -5,11 +5,11 @@
 	<include
 		resource="org/springframework/boot/logging/logback/console-appender.xml" />
 
-	<include resource="logback-rolling-appender.xml" />
+	<!-- <include resource="logback-rolling-appender.xml" /> -->
 
 	<root level="INFO">
 		<appender-ref ref="CONSOLE" />
-		<appender-ref ref="ROLLING-APPENDER" />
+		<!-- <appender-ref ref="ROLLING-APPENDER" /> -->
 	</root>
 	<logger name="org.springframework.web" level="INFO" />
 </configuration>
