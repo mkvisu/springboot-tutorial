@@ -17,6 +17,7 @@ public class SolarSystemApplication {
 
 	public static void main(String[] args) {
 		System.out.println("test");
+		
 		SpringApplication.run(SolarSystemApplication.class, args);
 	}
 

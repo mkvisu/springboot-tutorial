@@ -23,12 +23,12 @@ public class SolarSystemConfig {
 	@Autowired
 	private Environment env;
 
-	@Bean
-	public Planet planet() {
-		Planet planet = new Planet(name, perimeter, shape);
-		planet.setName(env.getProperty("solar.planet.name"));
-		return planet;
-	}
+//	@Bean
+//	public Planet planet() {
+//		Planet planet = new Planet(name, perimeter, shape);
+//		planet.setName(env.getProperty("solar.planet.name"));
+//		return planet;
+//	}
 
 	public String getName() {
 		return name;

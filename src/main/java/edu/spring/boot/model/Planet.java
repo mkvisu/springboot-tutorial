@@ -1,17 +1,33 @@
 package edu.spring.boot.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+@Entity
+@Table(name = "planets")
 public class Planet {
-	private String name;
-	private int perimeter;
-	private String shape;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
 
-	public Planet(String name, int perimeter, String shape) {
-		this.name = name;
-		this.perimeter = perimeter;
-		this.shape = shape;
+	private String name;
+
+	private float distance;
+
+	private int moons;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getName() {
@@ -22,20 +38,20 @@ public class Planet {
 		this.name = name;
 	}
 
-	public int getPerimeter() {
-		return perimeter;
+	public float getDistance() {
+		return distance;
 	}
 
-	public void setPerimeter(int perimeter) {
-		this.perimeter = perimeter;
+	public void setDistance(float distance) {
+		this.distance = distance;
 	}
 
-	public String getShape() {
-		return shape;
+	public int getMoons() {
+		return moons;
 	}
 
-	public void setShape(String shape) {
-		this.shape = shape;
+	public void setMoons(int moons) {
+		this.moons = moons;
 	}
 
 }

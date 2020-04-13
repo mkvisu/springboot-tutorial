@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Solar System</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--     <link rel="stylesheet" type="text/css" media="all" 
+          href="../../css/gtvg.css" th:href="@{/css/gtvg.css}" /> -->
+<link href="webjars/bootstrap/4.3.1/css/bootstrap.min.css"
+	rel="stylesheet">
+</head>
+
+<body>
+
+
+	<div class="container">
+		<h1>Planets list</h1>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Distance from Sun</th>
+					<th>Number of Moons</th>
+				</tr>
+			</thead>
+			<tr th:each="planet : ${planets}">
+				<td th:text="${planet.name}">Onions</td>
+				<td th:text="${planet.distance}">2.41</td>
+				<td th:text="${planet.moons}">yes</td>
+			</tr>
+		</table>
+		<p>
+			<a href="./solarSystem.html" th:href="@{/info}">Return to home</a>
+		</p>
+
+		<script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+		<script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</div>
+</body>
+
+</html>
